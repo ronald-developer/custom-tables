@@ -1,0 +1,154 @@
+ul {
+  margin-left: 10px;
+  list-style-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Small-dark-green-circle.svg/16px-Small-dark-green-circle.svg.png');
+}
+
+.outer-list {
+  position: relative;
+}
+
+.outer-list:after {
+  position: absolute;
+  height: calc(100% - 45px);
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  left: 25px;
+  top: 20px;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+.inner-list {
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.inner-list:before {
+  position: absolute;
+  height: 40px;
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  transform: rotate(-45deg);
+  left: 4px;
+  bottom: 100%;
+  margin-bottom: -15px;
+}
+
+.inner-list:after {
+  position: absolute;
+  height: 40px;
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  transform: rotate(45deg);
+  left: 5px;
+  top: 100%;
+  margin-top: -15px;
+}
+
+.inner-list li {
+  position: relative;
+}
+
+.inner-list li:after {
+  position: absolute;
+  height: 15px;
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  left: -15px;
+  top: 20px;
+}
+
+.inner-list li:last-child:after {
+  display: none;
+}
+table {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr td{
+  position: relative;
+}
+table tr:hover {background-color: #ddd;}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  &.child{
+    margin-left: 20px
+  }
+  &.child-child{
+    margin-left: 40px
+  }
+}
+
+
+.outer-container {
+  position: relative;
+  display: table-row-group;
+}
+
+.outer-container:after {
+  position: absolute;
+  height: calc(100% - 36px);
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  left: 13px;
+  top: 20px;
+}
+
+.inner-container:before {
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  content: '';
+  display: block;
+  background-color: black;
+  transform: rotate(90deg);
+  left: 20px;
+  top: 9px;
+}
+
+.inner-container-child:before {
+  position: absolute;
+  height: 14px;
+  width: 2px;
+  content: '';
+  display: block;
+  background-color: black;
+  transform: rotate(90deg);
+  left: 20px;
+  top: 9px;
+}
